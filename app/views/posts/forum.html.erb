@@ -1,5 +1,5 @@
 <% @posts.each do |post| %>
-  
+  <title><%= post.message %></title>
   <div class="main">
     <%=h post.message %> <br>
   <b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; via <%=h post.url %> 
