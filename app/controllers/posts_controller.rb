@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  require 'net/http'
+  require 'cgi'
+  
   # GET /posts
   # GET /posts.xml
   def index
