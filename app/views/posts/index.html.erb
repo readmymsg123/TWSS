@@ -13,8 +13,8 @@
   <tr>
     <td><%= post.message %></td>
     <td><%= post.url %></td>
-    <td><%= button_to 'Show', post %></td>
-    <td><%= button_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <td><%= button_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
