@@ -1,10 +1,14 @@
 <% @posts.each do |post| %>
+  
   <div class="main">
-    <%=h post.message %><br>
-  <b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; via <%=h post.url %></b>
-
- 
+    <%=h post.message %> <br>
+  <b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; via <%=h post.url %>   <br>
+    <div align="right">
+       <iframe src="http://www.facebook.com/plugins/like.php?href=<%=post[:url]%>&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe>
+           <br> 
+    </div>      
   </div>
+  <br/>
 <% end %>
 
 
