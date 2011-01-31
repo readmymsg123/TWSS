@@ -1,14 +1,46 @@
-<!DOCTYPE html>
-<html>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Twss</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
+<title>Fruits</title>
+<meta http-equiv="Content-Language" content="English" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<%= stylesheet_link_tag "style.css" %>
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="rss-articles/" />
 </head>
 <body>
 
+<div id="wrap">
+
+<div id="header">
+<h1><a href="#">That's What She Said!</a></h1>
+
+</div>
+
+
+<div id="content">
+ 
+ 
+<br/> 
+<div class="main"> 
+I like long, hard objects.
+<br/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>-Barack Obama</b> (via <a href="http://www.cnn.com/">CNN</a>)
+<br/> 
+<hr> 
+<a href = "#">cool!</a> (170) | <a href = "#">lame.</a> (33)
+</div> 
+ 
+<br/> 
+ 
 <%= yield %>
 
+<div id="bottom"> </div>
+
+<div id="footer">
+<a href="http://www.templatesold.com/" target="_blank">Website Templates</a> by <a href="http://www.free-css-templates.com/" target="_blank">Free CSS Templates</a>
+</div>
+
+</div>
 </body>
 </html>

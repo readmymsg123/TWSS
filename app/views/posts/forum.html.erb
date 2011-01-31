@@ -1,0 +1,13 @@
+<% @posts.each do |post| %>
+  <div class="main">
+    <%=h post.message %>
+  <b><%=h post.url %></b>
+
+ 
+  </div>
+<% end %>
+
+
+<br />
+
+<%= will_paginate @posts %>  <%= link_to "New post", new_post_path %> 
