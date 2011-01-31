@@ -1,7 +1,8 @@
 Twss::Application.routes.draw do
+  root :to => "posts#forum"
   resources :posts
 
-  root :to => "posts#forum"
+ 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
