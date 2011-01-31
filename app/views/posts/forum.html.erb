@@ -1,7 +1,7 @@
 <% @posts.each do |post| %>
   <div class="main">
-    <%=h post.message %>
-  <b><%=h post.url %></b>
+    <%=h post.message %><br>
+  <b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; via <%=h post.url %></b>
 
  
   </div>
@@ -10,4 +10,7 @@
 
 <br />
 
-<%= will_paginate @posts %>  <%= link_to "New post", new_post_path %> 
+<%= will_paginate @posts %>  
+
+
+
