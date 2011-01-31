@@ -1,16 +1,25 @@
+<%= form_for(@post, :method => 'GET') do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-<%= form_tag(@post,  :method => "get") do %>
   <div class="field">
-  <%= label_tag(:message)%><br />
-  <%= text_field_tag(:message, params[:message])%> <br />
+    <%= f.label :message %><br />
+    <%= f.text_field (:message) %>
   </div>
   <div class="field">
-    <%= label_tag(:url)%><br />
-    <%= text_field_tag(:url, params[:url])%><br />
+    <%= f.label :url %><br />
+    <%= f.text_field (:url) %>
   </div>
-  <div class="submit">
-    <%= submit_tag("Submit")%>
+  <div class="actions">
+    <%= f.submit %>
   </div>
-<% end %>    
-    
+<% end %>

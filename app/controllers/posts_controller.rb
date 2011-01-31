@@ -28,7 +28,9 @@ class PostsController < ApplicationController
   # GET /posts/new.xml
   def new
     @post = Post.new
-
+    @post.message = params[:message]
+    @post.url = params[:url]
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @post }
